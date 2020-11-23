@@ -1,4 +1,15 @@
+
 img {
-  width: 5%;
-  height: auto;
+  width: 250px;
+  height: 250px;
+  margin:15px;
 }
+
+body {
+	background-color: rgba(0,0,0,0.9);
+	color: white;
+}
+li {
+	display: inline-block;
+}
+

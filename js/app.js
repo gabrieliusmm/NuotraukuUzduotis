@@ -1,6 +1,6 @@
-let show = document.querySelector('button.rodyti');
-let mix = document.querySelector('button.maisyti');
-let save = document.querySelector('button.saugoti');
+let show = document.querySelector('button#rodyti');
+let mix = document.querySelector('button#maisyti');
+let save = document.querySelector('button#saugoti');
 
 let nuotraukudiv = document.querySelector('div.nuotraukos');
 
@@ -11,6 +11,8 @@ save.addEventListener('click',saveimages)
 let images = ['logo1.png','logo2.png','logo3.png','logo4.png','logo5.png'];
 const path = "img/";
 function showimg() {
+	let ph1 = document.querySelector('#h1text');
+	ph1.innerHTML = 'Nuotraukos';
 	let imagelist = document.querySelector('.nuotraukos ul')
 	for(let i = 0; i < images.length; i++) {
 		let li = document.createElement('li');
@@ -42,9 +44,15 @@ function saveimages() {
 		console.log(imgElementai[i])
 	}
 }
-let print = document.querySelector('button.print')
+
+let print = document.querySelector('button#print')
 print.addEventListener('click',printout);
 function printout() {
+
+	let ph1 = document.createElement('H1');
+	ph1.innerHTML = 'Issaugotos Nuotraukos';
+	nuotraukudiv.appendChild(ph1);
+
 	let imagelist = document.querySelector('.savedimg ul')
 	for(let i = 0; i < images.length; i++) {
 		let li = document.createElement('li');
